@@ -34,3 +34,15 @@ git merge <branch> <branch>  // merges the branches
 tip: when merging branches the branch your on is always included
 
 tip: git checkout -b <branch>  // creates a new branch and swithces to it
+
+git fetch // fetches a remote branch but doesnt merge it with your master
+
+tip: When forking another repo and cloning to your local machine you should
+make changes on your master branch while keeping the original branch
+untouched. The original untouched branch is conventally named upstream but
+you can name it whatever your want.
+
+tip: when you make changes to a branch you shold merge the upstream branch to
+your to resolve confilcts, then you can push it to github and send a pull
+request to the owner.
+

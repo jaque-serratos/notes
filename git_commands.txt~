@@ -33,4 +33,4 @@ git merge <branch> <branch>  // merges the branches
 
 tip: when merging branches the branch your on is always included
 
-
+tip: git checkout -b <branch>  // creates a new branch and swithces to it
