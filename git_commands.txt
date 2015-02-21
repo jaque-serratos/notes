@@ -1,48 +1,41 @@
-git diff // to see the differences between versions of a file based on commits
-
-tip: each commit should equal one logical change
-	example: two bugs in two different functions should get two commits one for each
-
-git log ---  // shows you the hitsory of the changes starting with most recent  on the project and shows your the ID of who did what
-
-git diff <ID> <ID> // lets you see the exact differences between the versions
-specified by ID
-
-git checkout <ID>  // allows you to use a pervoius version of a file 
-
-
+## initialize a repo
 git init // initializes the directory to be monitored by git
+git clone <url>  // clones a git repo to your working directory
 
+## add and save changes to git
+git remote add <name> <url>  // adds a remote repo to keep in synce with
+git add  // add change to to staging area before being commited
 git commit // opens your default text editor comments should be a command
-
-git checkout master // resturn back to the most recent code version
-
+git push <name> <branch>  // push your changes to the remote repo, name is the
+    name you gave it when you used the command git remote add <name>
+tip: each commit should equal one logical change
+  example: two bugs in two different functions should get two commits one for each
 tip: after making a change to a file use git add to add it to the staging area 
     when your ready to commit to the change type git commit and add a comment
     about your change
 
-git branch // theis command alone allows your to see what branches are
-       available
-git branch name  // creates a new branch called name so you can male changes 
+## view and compare changes
+git log  // shows you the hitsory of the changes starting with most recent
+git diff <ID> <ID> // lets you see the exact differences between the versions
+
+## create and change branches
+git branch // this command alone allows your to see what branches are available
+git branch <name>  // creates a new branch called name so you can make changes 
      without affectin the master branch 
+git checkout <ID>  // allows you to use a pervoius version/branch of a file 
+git checkout master // returns back to the most recent code version
 tip: after creating a branch use git checkout <branch name> to switch to it
-
-git add  // add change to to staging area before being commited
-
-git merge <branch> <branch>  // merges the branches
-
-tip: when merging branches the branch your on is always included
-
 tip: git checkout -b <branch>  // creates a new branch and swithces to it
 
+## merging branches
+git merge <branch> <branch>  // merges the branches
 git fetch // fetches a remote branch but doesnt merge it with your master
-
+tip: when merging branches the branch your on is always included
 tip: When forking another repo and cloning to your local machine you should
-make changes on your master branch while keeping the original branch
-untouched. The original untouched branch is conventally named upstream but
-you can name it whatever your want.
-
-tip: when you make changes to a branch you shold merge the upstream branch to
-your to resolve confilcts, then you can push it to github and send a pull
-request to the owner.
+  make changes on your master branch while keeping the original branch
+  untouched. The original untouched branch is conventionally named upstream but
+  you can name it whatever your want.
+tip: when you make changes to a branch you should merge the upstream branch to
+  yours to resolve confilcts, then you can push it to github and send a pull
+  request to the owner.
 
